@@ -27,5 +27,6 @@ public class Main {
 
 
 	    graph.breadthFirstSearch(aVertex);
+	    graph.depthFirstSearch(aVertex);
     }
 }

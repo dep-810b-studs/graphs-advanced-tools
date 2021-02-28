@@ -10,6 +10,7 @@
 
     <modules>
         <module>graphs-native</module>
+        <module>graphs-spark</module>
     </modules>
 
 </project>

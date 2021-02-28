@@ -13,4 +13,6 @@
         <module>graphs-spark</module>
     </modules>
 
+    <packaging>pom</packaging>
+
 </project>

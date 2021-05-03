@@ -1,0 +1,2 @@
+LOAD CSV WITH HEADERS FROM 'file:///musae_facebook_target.csv' AS line
+CREATE (:Page {id: toInteger(line.id), facebookId: toInteger(line.facebook_id), pageName: line.page_name, pageType: line.page_type});

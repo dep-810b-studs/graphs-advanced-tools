@@ -4,12 +4,14 @@ import org.apache.spark.sql.SparkSession
 
 object GraphSpark {
 
-  case class VerticeInfo(countPosts: Int, engagementGrade: Double)
+  def InitSession(): SparkSession = {
+    val session = SparkSession
+      .builder()
+      .master("local[*]")
+      .appName("graphs")
+      .getOrCreate()
 
-  def InitSession() = SparkSession
-    .builder()
-    .master("local[*]")
-    .appName("graphTest")
-    .getOrCreate()
-
+    session.sparkContext.setLogLevel("WARN")
+    session
+  }
 }

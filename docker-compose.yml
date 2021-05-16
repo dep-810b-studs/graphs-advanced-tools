@@ -1,6 +1,6 @@
 services:
   graph_db:
-    image: neo4j:latest
+    image: neo4j
     ports:
       - 7474:7474
       - 7687:7687
@@ -12,3 +12,7 @@ services:
       - ./plugins:/plugins
     environment:
       NEO4J_AUTH: none
+      NEO4J_dbms_memory_heap_max__size: 3000m
+      NEO4J_dbms_memory_pagecache_size: 1000m
+      NEO4J_dbms_security_procedures_unrestricted: gds.\\\* \, apoc.\\\* \, algo.\\\* \
+

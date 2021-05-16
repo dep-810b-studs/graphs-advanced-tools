@@ -69,15 +69,12 @@
                         <jvmArg>-Xmx1024m</jvmArg>
                     </jvmArgs>
                     <scalaCompatVersion>${scala.suffix.version}</scalaCompatVersion>
-                    <args>
+                   <args>
                         <arg>-unchecked</arg>
                         <arg>-deprecation</arg>
                         <arg>-feature</arg>
                         <arg>-language:implicitConversions</arg>
-                        <arg>-Xmax-classfile-name</arg>
-                        <arg>100</arg>
                     </args>
-                    <recompileMode>incremental</recompileMode>
                     <scalaVersion>${scala.version}</scalaVersion>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
@@ -182,55 +179,7 @@
     </profiles>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_${scala.suffix.version}</artifactId>
-            <version>${spark.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_${scala.suffix.version}</artifactId>
-            <version>${spark.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-graphx_${scala.suffix.version}</artifactId>
-            <version>${spark.version}</version>
-            <scope>provided</scope>
-        </dependency>
 
-        <dependency>
-            <groupId>org.json4s</groupId>
-            <artifactId>json4s-native_${scala.suffix.version}</artifactId>
-            <version>${json4s.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.log4s</groupId>
-            <artifactId>log4s_${scala.suffix.version}</artifactId>
-            <version>${log4s.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_${scala.suffix.version}</artifactId>
-            <version>${scalatest.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.scalamock</groupId>
-            <artifactId>scalamock_2.11</artifactId>
-            <version>4.4.0</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
 </project>

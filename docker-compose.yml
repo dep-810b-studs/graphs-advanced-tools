@@ -5,7 +5,7 @@ services:
       - 7474:7474
       - 7687:7687
     volumes:
-      - ./conf:/conf
+      - ./conf:/var/lib/neo4j/conf
       - ./data:/data
       - ./import:/import
       - ./logs:/logs

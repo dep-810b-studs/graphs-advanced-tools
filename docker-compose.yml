@@ -14,5 +14,5 @@ services:
       NEO4J_AUTH: none
       NEO4J_dbms_memory_heap_max__size: 3000m
       NEO4J_dbms_memory_pagecache_size: 1000m
-      NEO4J_dbms_security_procedures_unrestricted: gds.\\\* \, apoc.\\\* \, algo.\\\* \
+      NEO4J_dbms_security_procedures_unrestricted: gds.*
 

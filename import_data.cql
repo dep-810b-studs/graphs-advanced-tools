@@ -36,12 +36,11 @@ CALL gds.graph.create(
 CALL gds.wcc.stats('InstagramFollowingsGraph')
 YIELD componentCount
 
-MATCH (source:InstagramUser {id: '30343'}), (target:InstagramUser {id: '15821'})
-CALL gds.beta.shortestPath.yens.stream('InstagramGraph', {
+MATCH (source:InstagramUser {Id: 30343}), (target:InstagramUser {Id: 15821})
+CALL gds.beta.shortestPath.yens.stream('InstagramFollowingsGraph', {
     sourceNode: id(source),
     targetNode: id(target),
-    k: 5,
-    relationshipWeightProperty: 'length'
+    k: 5
 })
 YIELD index, sourceNode, targetNode, totalCost, nodeIds, costs
 RETURN

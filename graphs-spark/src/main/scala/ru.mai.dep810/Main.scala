@@ -24,9 +24,11 @@ object Main extends App{
     triplet => triplet.sendToSrc((triplet.srcId.toInt, triplet.srcAttr.calculateMeasure())),
     (a, b) => (a._1,a._2 + b._2 ))
 
+  println("TOP 10 перспективых пользователей")
+
   furtherFollowees
     .sortBy(-_._2._2)
     .take(10)
-    .foreach(println)
+    .foreach(folowee => println(folowee._2))
 
 }
